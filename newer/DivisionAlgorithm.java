@@ -12,8 +12,15 @@ public class DivisionAlgorithm {
 		int n=sc.nextInt();
 		System.out.println("input m:");
 		int m=sc.nextInt();
-		int max=(n>m)?n:m;
-		int min=(n<m)?n:m;
+		int greatestCommonDivisor=0;
+		greatestCommonDivisor=DivisionAlg(n,m);
+		System.out.println("Greatest common divisor:"+greatestCommonDivisor);
+	}
+	
+	//找最大公因数的方法------//因为之后还会用到，所以作为方法调用-----
+	public static int DivisionAlg(int x1,int x2) {
+		int max=(x1>x2)?x1:x2;
+		int min=(x1<x2)?x1:x2;
 		int temp=min;
 		for(int i=1;min!=0;i++) {
 			min=max%min;
@@ -23,7 +30,7 @@ public class DivisionAlgorithm {
 			}
 			temp=min;
 		}
-		System.out.println("Greatest common divisor:"+temp);
+		return temp;
 	}
-
+	
 }

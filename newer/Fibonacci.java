@@ -20,4 +20,33 @@ public class Fibonacci {
 		}
 
 	}
+	
+	/**
+	 * 次方法将在以后用来创造一个斐波那契数列
+	 * 参数1指定从斐波那契数列中的哪个下标开始，参数2指定数组长度
+	 * @return
+	 */
+	public static int[] CreatFibonacci(int a,int n) {
+		int[] arr=new int[n];
+		int x1=1;
+		int x2=1;
+		int s=1;
+		for(int i=3;i<a+n;i++) {
+			s=x1+x2;
+			x1=x2;
+			x2=s;
+			if(i>=a) {
+				arr[i-a]=s;
+			}
+		}
+		if(a==2){
+			arr[0]=1;
+		}else if(a==1) {
+			arr[0]=1;
+			arr[1]=1;
+		}
+		return arr;
+	}
+	
+	
 }

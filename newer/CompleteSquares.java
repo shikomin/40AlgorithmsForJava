@@ -1,5 +1,9 @@
 package algorithm40ForJava;
-
+/**
+ * 一个整数，它加上100后是一个完全平方数，加上168又是一个完全平方数，请问该数是多少？   
+ * @author 86151
+ *
+ */
 public class CompleteSquares {
 
 	public static void main(String[] args) {
